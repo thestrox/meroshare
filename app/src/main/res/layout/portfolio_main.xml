@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:id="@+id/button_add"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="13dp"
+        android:background="#D8D8C0"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_alignParentEnd="true" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_reload"
+        android:id="@+id/button_reload"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="13dp"
+        android:background="#D8D8C0"
+        android:layout_marginRight="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_alignParentEnd="true" />
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_back"
+        android:id="@+id/button_back"
+        android:background="#D8D8C0"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="21dp"
+        />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:id="@+id/top"
+        android:background="#fffaef">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Updated:"
+            android:id="@+id/textView_datelabel"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginStart="62dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textView_date"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="170dp"
+            android:layout_marginStart="170dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nepse Index:"
+            android:id="@+id/textView_indexlabel"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="45dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Difference:"
+            android:id="@+id/textView_difflabel"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginStart="200dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textView_index"
+            android:layout_marginTop="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="110dp"
+            android:layout_marginStart="110dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textView_diff"
+            android:layout_marginTop="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="280dp"
+            android:layout_marginStart="280dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#008080"
+        android:id="@+id/top_margin"
+        android:layout_below="@id/top">
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="115dp"
+        android:id="@+id/middle"
+        android:background="#fffaef"
+        android:layout_below="@id/top_margin">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Share :"
+        android:id="@+id/textView_sharelabel"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Worth :"
+        android:id="@+id/textView_worthlabel"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/textView_investmentlabel"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Investment :"
+        android:id="@+id/textView_investmentlabel"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/textView_sharelabel"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profit/Loss :"
+        android:id="@+id/textView_pllabel"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/textView_worthlabel"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today Profilt/Loss :"
+        android:id="@+id/textView_tpllabel"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/textView_pllabel"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_share"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/textView_tpllabel"
+        android:layout_toEndOf="@+id/textView_tpllabel"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_investment"
+        android:layout_below="@+id/textView_sharelabel"
+        android:layout_toRightOf="@+id/textView_tpllabel"
+        android:layout_toEndOf="@+id/textView_tpllabel"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_worth"
+        android:layout_below="@+id/textView_investmentlabel"
+        android:layout_toRightOf="@+id/textView_tpllabel"
+        android:layout_toEndOf="@+id/textView_tpllabel"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_pl"
+        android:layout_below="@+id/textView_worthlabel"
+        android:layout_toRightOf="@+id/textView_tpllabel"
+        android:layout_toEndOf="@+id/textView_tpllabel"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_tpl"
+        android:layout_below="@+id/textView_pllabel"
+        android:layout_toRightOf="@+id/textView_tpllabel"
+        android:layout_toEndOf="@+id/textView_tpllabel"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#008080"
+        android:id="@+id/bottom_margin"
+        android:layout_below="@id/middle">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/bottom"
+        android:background="#fffaef"
+        android:layout_below="@id/bottom_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Symbol"
+            android:id="@+id/textView_symbollabel"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today"
+            android:id="@+id/textView_lastpricelabel"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginStart="70dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buying"
+            android:id="@+id/textView_buypricelabel"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginStart="130dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shares"
+            android:id="@+id/textView_shareslabel"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginStart="200dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profit"
+            android:id="@+id/textView_profitlabel"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="265dp"
+            android:layout_marginStart="265dp"/>
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView_portofolio"
+            android:layout_marginTop="35dp" />
+        <TextView android:id="@android:id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="No trasaction added"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp"/>
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

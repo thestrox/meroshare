@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/main"
+        android:background="#fffaef"
+       >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Company: "
+        android:id="@+id/textView_companylabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="64dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No. of Shares:"
+        android:id="@+id/textView_sharelabel"
+        android:layout_below="@+id/textView_companylabel"
+        android:layout_alignLeft="@+id/textView_companylabel"
+        android:layout_alignStart="@+id/textView_companylabel"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buying Price(Rs.):"
+        android:id="@+id/textView_pricelabel"
+        android:layout_below="@+id/textView_sharelabel"
+        android:layout_alignLeft="@+id/textView_sharelabel"
+        android:layout_alignStart="@+id/textView_sharelabel"
+        android:layout_marginTop="25dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/button_add"
+        android:layout_marginTop="51dp"
+        android:layout_below="@+id/textView_pricelabel"
+        android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_company"
+            android:hint="Select Company"
+            android:inputType="textNoSuggestions|textMultiLine"
+            android:focusable="false"
+            android:layout_above="@+id/textView_sharelabel"
+            android:layout_toRightOf="@+id/textView_pricelabel"
+            android:layout_toEndOf="@+id/textView_pricelabel" />
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_share"
+        android:layout_above="@+id/textView_pricelabel"
+        android:layout_toRightOf="@+id/textView_pricelabel"
+        android:maxLines="1"
+        android:inputType="number"/>
+
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_price"
+        android:layout_above="@+id/button_add"
+        android:layout_toRightOf="@+id/textView_pricelabel"
+        android:maxLines="1"
+        android:inputType="number"
+        android:layout_below="@+id/editText_share" />
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

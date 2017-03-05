@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/summary"
+            android:paddingLeft="16dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:background="#f1f1f1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="16sp"
+                android:text="Summary" />
+        </RelativeLayout>
+        <include layout="@layout/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/summary"
+            android:id="@+id/divider"
+           />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@color/white"
+            android:id="@+id/data"
+            android:layout_below="@id/divider">
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_investment_label"
+            android:fontFamily="sans-serif-medium"
+
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp"
+            android:text="Total Investment:" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_investment"
+            android:layout_toRightOf="@+id/textView_investment_label"
+            android:layout_alignParentRight="true"
+
+            android:gravity="right"
+
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp"
+            tools:text="50000" />
+
+        <include layout="@layout/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/textView_investment_label"
+            android:id="@+id/divider1"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_worth_label"
+            android:layout_below="@+id/divider1"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp"
+            android:text="Total Worth:" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_worth"
+            android:layout_toRightOf="@+id/textView_worth_label"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/divider1"
+            android:gravity="right"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp"
+            tools:text="60000" />
+
+        <include layout="@layout/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/textView_worth_label"
+            android:id="@+id/divider2"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_pl_label"
+            android:layout_below="@+id/divider2"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp"
+            android:text="Profit/Loss:" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_pl"
+            android:layout_toRightOf="@+id/textView_pl_label"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/divider2"
+            android:gravity="right"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp"
+            tools:text="6000" />
+
+        <include layout="@layout/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/textView_pl_label"
+            android:id="@+id/divider3"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_tpl_label"
+            android:layout_below="@+id/divider3"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp"
+            android:text="Day's Profit/Loss:" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_tpl"
+            android:layout_toRightOf="@+id/textView_tpl_label"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/divider3"
+            android:gravity="right"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp"
+            tools:text="1000" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/data"
+            android:id="@+id/divider4"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
+
+            android:paddingTop="8dp"
+            android:background="#f1f1f1"
+            android:layout_below="@+id/divider4"
+            android:elevation="2dp"
+            android:id="@+id/labels">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp"
+            android:text="Symbol"
+            android:layout_weight=".5"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp"
+            android:text="Latest"
+            android:gravity="center"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp"
+            android:layout_marginRight="16dp"
+            android:text="Buying"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp"
+            android:layout_marginRight="16dp"
+            android:text="Shares"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp"
+            android:layout_marginRight="16dp"
+            android:text="Profit"
+            />
+        </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labels">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listView_portofolio"
+            android:layout_alignParentTop="true"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/item_portfolio" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
+    <com.github.rahatarmanahmed.cpv.CircularProgressView
+        android:id="@+id/progress_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"
+        app:cpv_animAutostart="false"
+        app:cpv_indeterminate="true" />
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_colorNormal="@color/colorAccent"
+        app:fab_colorPressed="#00dbff"
+        app:fab_colorRipple="#0086ff"
+        android:src="@drawable/ic_add_white_24dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/md_keylines"
+        android:layout_marginRight="@dimen/md_keylines"
+        />
+
+
+</FrameLayout>

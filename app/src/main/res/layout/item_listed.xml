@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:id="@+id/data"
+    android:layout_below="@id/summary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_symbol_label"
+        android:fontFamily="sans-serif-medium"
+
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="14sp"
+        android:text="Symbol:" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/symbol"
+        android:layout_toRightOf="@+id/textView_symbol_label"
+        android:layout_alignParentRight="true"
+
+        android:gravity="right"
+
+        android:fontFamily="sans-serif-medium"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="14sp"
+        tools:text="50000" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_name_label"
+        android:layout_below="@+id/textView_symbol_label"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="8dp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="14sp"
+        android:text="Name:" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:layout_toRightOf="@+id/textView_name_label"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView_symbol_label"
+        android:layout_marginTop="8dp"
+        android:gravity="right"
+        android:fontFamily="sans-serif-medium"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="14sp"
+        tools:text="60000" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_sector_label"
+        android:layout_below="@+id/textView_name_label"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="14sp"
+        android:text="Sector:" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sector"
+        android:layout_toRightOf="@+id/textView_sector_label"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView_name_label"
+        android:layout_marginTop="8dp"
+        android:gravity="right"
+        android:fontFamily="sans-serif-medium"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="14sp"
+        tools:text="6000" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_lastprice_label"
+        android:layout_below="@+id/textView_sector_label"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="14sp"
+        android:text="Last Price:" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastprice"
+        android:layout_toRightOf="@+id/textView_lastprice_label"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView_sector_label"
+        android:layout_marginTop="8dp"
+        android:gravity="right"
+        android:fontFamily="sans-serif-medium"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="14sp"
+        tools:text="1000" />
+
+</RelativeLayout>

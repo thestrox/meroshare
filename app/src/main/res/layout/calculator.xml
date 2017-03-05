@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:background="#fffaef"
+        android:id="@+id/main">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Types of Investment"
+            android:id="@+id/textView"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp" />
+
+        <RadioGroup
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_group"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buying"
+                android:id="@+id/radioButton_buy"
+                android:checked="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selling"
+                android:id="@+id/radioButton_sell"
+                android:checked="false"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="40dp" />
+
+            </RadioGroup>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#008080"
+        android:id="@+id/middle"
+        android:layout_below="@id/main">
+
+        </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="325dp"
+        android:background="#fffaef"
+        android:id="@+id/bottom"
+        android:layout_below="@id/middle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No. of Shares"
+            android:id="@+id/textView_share"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buying Price"
+            android:id="@+id/textView_buy"
+            android:layout_below="@+id/textView_share"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selling Price"
+            android:id="@+id/textView_sell"
+            android:layout_below="@+id/textView_buy"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp" />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_share"
+            android:layout_above="@id/textView_buy"
+            android:layout_toRightOf="@id/textView_share"
+            android:layout_marginLeft="5dp"
+            android:maxLines="1"
+            android:inputType="number" />
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_buy"
+            android:maxLines="1"
+            android:inputType="number"
+            android:layout_above="@+id/editText_sell"
+            android:layout_alignLeft="@+id/editText_share"
+            android:layout_alignStart="@+id/editText_share" />
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_sell"
+            android:maxLines="1"
+            android:inputType="number"
+            android:layout_alignBottom="@+id/textView_sell"
+            android:layout_alignLeft="@+id/editText_buy"
+            android:layout_alignStart="@+id/editText_buy" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:id="@+id/button_calculate"
+            android:layout_below="@id/editText_sell"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount Rs:"
+            android:id="@+id/textView_amtlabel"
+            android:layout_below="@+id/button_calculate"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@+id/textView_sell"
+            android:layout_alignStart="@+id/textView_sell" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEBON Commision Rs:"
+            android:id="@+id/textView_sebonlabel"
+            android:layout_below="@+id/textView_namelabel"
+            android:layout_alignLeft="@+id/textView_brokerlabel"
+            android:layout_alignStart="@+id/textView_brokerlabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Broker Commision Rs:"
+            android:id="@+id/textView_brokerlabel"
+            android:layout_below="@+id/textView_amtlabel"
+            android:layout_alignLeft="@+id/textView_amtlabel"
+            android:layout_alignStart="@+id/textView_amtlabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name Transfer Fee Rs:"
+            android:id="@+id/textView_namelabel"
+            android:layout_below="@+id/textView_brokerlabel"
+            android:layout_alignLeft="@+id/textView_sebonlabel"
+            android:layout_alignStart="@+id/textView_sebonlabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Capital Gain Tax Rs:"
+            android:id="@+id/textView_capitallabel"
+            android:layout_below="@+id/textView_sebonlabel"
+            android:layout_alignLeft="@+id/textView_sebonlabel"
+            android:layout_alignStart="@+id/textView_sebonlabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_amt"
+            android:text=""
+            android:layout_alignTop="@+id/textView_amtlabel"
+            android:layout_alignRight="@+id/button_calculate"
+            android:layout_alignEnd="@+id/button_calculate" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textView_broker"
+            android:layout_above="@+id/textView_namelabel"
+            android:layout_alignLeft="@+id/textView_amt"
+            android:layout_alignStart="@+id/textView_amt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textView_name"
+            android:layout_alignBottom="@+id/textView_namelabel"
+            android:layout_alignLeft="@+id/textView_amt"
+            android:layout_alignStart="@+id/textView_amt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textView_sebon"
+            android:layout_above="@+id/textView_capitallabel"
+            android:layout_alignLeft="@+id/textView_amt"
+            android:layout_alignStart="@+id/textView_amt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textView_capital"
+            android:layout_alignBottom="@+id/textView_capitallabel"
+            android:layout_alignLeft="@+id/textView_broker"
+            android:layout_alignStart="@+id/textView_broker" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#008080"
+        android:id="@+id/bottom_margin"
+        android:layout_below="@+id/bottom">
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#fffaef"
+        android:id="@+id/result"
+        android:layout_below="@+id/bottom_margin">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount Rs:"
+            android:id="@+id/textView_totalamtlabel"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profit/Loss Rs:"
+            android:id="@+id/textView_pllabel"
+            android:layout_below="@id/textView_totalamtlabel"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_totalamt"
+            android:layout_alignTop="@+id/textView_totalamtlabel"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_pl"
+            android:layout_alignTop="@+id/textView_pllabel"
+            android:layout_alignLeft="@+id/textView_totalamt"
+            android:layout_alignStart="@+id/textView_totalamt" />
+
+    </RelativeLayout>
+</RelativeLayout>

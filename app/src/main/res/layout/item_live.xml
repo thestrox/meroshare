@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="14sp"
+        android:layout_weight="1"
+        android:id="@+id/company"
+        tools:text="ACEDBL"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="14sp"
+        android:layout_weight="1"
+        android:layout_marginRight="24dp"
+        android:gravity="center"
+        android:id="@+id/lastprice"
+        tools:text="1715"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:id="@+id/open"
+        tools:text="1800"/>
+
+    <TextView
+        android:layout_width="40dp"
+        android:id="@+id/difference"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="14sp"
+        android:gravity="right"
+        android:layout_marginRight="8dp"
+        tools:text="-85"
+
+        />
+
+    <ImageView
+        android:id="@+id/up"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_arrow_drop_up_white_24dp"
+        android:visibility="gone"
+        android:tint="#00ff00"/>
+
+    <ImageView
+        android:id="@+id/down"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_arrow_drop_down_white_24dp"
+        android:visibility="gone"
+        android:tint="#ff0000"/>
+    <ImageView
+        android:id="@+id/same"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_code_tags_white_18dp"
+        android:tint="#0000ff"
+        android:visibility="gone"/>
+
+
+    </LinearLayout>

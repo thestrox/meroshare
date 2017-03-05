@@ -1,0 +1,320 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/label1"
+            android:paddingLeft="16dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                android:text="Interested In" />
+        </RelativeLayout>
+
+        <include layout="@layout/divider"
+            android:id="@+id/divider"
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/label1"/>
+        <RadioGroup
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_group"
+            android:padding="16dp"
+            android:background="@color/white"
+            android:layout_below="@+id/divider"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buying"
+                android:layout_weight="1"
+                android:id="@+id/radioButton_buy"
+                android:checked="true" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selling"
+                android:id="@+id/radioButton_sell"
+                android:layout_weight="2"
+                android:checked="false" />
+        </RadioGroup>
+
+
+        <include layout="@layout/divider"
+            android:id="@+id/divider1"
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/radio_group"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/edit"
+            android:layout_below="@+id/divider1"
+          android:padding="16dp"
+            >
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText android:id="@+id/editText_share"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:hint="No.of Shares" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <EditText android:id="@+id/editText_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:hint="Buying Price" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <EditText android:id="@+id/editText_sell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:hint="Selling Price" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_calculate"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_below="@+id/edit"
+            android:text="Calculate"
+            android:layout_gravity="center"
+            android:theme="@style/MyButtonRaised" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            android:background="#e0e0e0"
+            android:id="@+id/data"
+            android:layout_below="@id/button_calculate"
+            android:visibility="gone">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_amt_label"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                android:text="Total Amount:" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_amt"
+                android:layout_toRightOf="@+id/textView_amt_label"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                tools:text="50000" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_broker_label"
+                android:layout_below="@+id/textView_amt_label"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                android:text="Broker Commission:" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_broker"
+                android:layout_toRightOf="@+id/textView_broker_label"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView_amt_label"
+                android:layout_marginTop="4dp"
+                android:gravity="right"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                tools:text="60000" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_name_label"
+                android:layout_below="@+id/textView_broker_label"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                android:text="Name Transfer Fee" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_name"
+                android:layout_toRightOf="@+id/textView_name_label"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView_broker_label"
+                android:layout_marginTop="4dp"
+                android:gravity="right"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                tools:text="6000" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_sebon_label"
+                android:layout_below="@+id/textView_name_label"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                android:text="SEBON Fee:" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_sebon"
+                android:layout_toRightOf="@+id/textView_sebon_label"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView_name_label"
+                android:layout_marginTop="4dp"
+                android:gravity="right"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                tools:text="1000" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_capital_label"
+                android:layout_below="@+id/textView_sebon_label"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                android:text="Capital Gain Tax:" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_capital"
+                android:layout_toRightOf="@+id/textView_capital_label"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView_sebon_label"
+                android:layout_marginTop="4dp"
+                android:gravity="right"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                tools:text="1000" />
+
+            <include layout="@layout/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/textView_capital_label"
+                android:id="@+id/divider4"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_totalamt_label"
+                android:layout_below="@+id/divider4"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif-medium"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                android:text="Total Amount:" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_totalamt"
+                android:layout_toRightOf="@+id/textView_totalamt_label"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/divider4"
+                android:layout_marginTop="4dp"
+                android:gravity="right"
+                android:fontFamily="sans-serif-medium"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                tools:text="1000" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_pl_label"
+                android:layout_below="@+id/textView_totalamt_label"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif-medium"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                android:text="Profit/Loss:" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_pl"
+                android:layout_toRightOf="@+id/textView_pl_label"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView_totalamt_label"
+                android:layout_marginTop="4dp"
+                android:gravity="right"
+                android:fontFamily="sans-serif-medium"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="14sp"
+                tools:text="1000" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/homelistview"
+        android:layout_marginTop="72dp">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView_home"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_company" />
+        <TextView android:id="@android:id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="Your portfolio is empty"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Company"
+            android:id="@+id/textView_company"
+            android:layout_below="@+id/textView_datelabel"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="@dimen/list_body"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latest Price"
+            android:id="@+id/textView_last"
+            android:layout_below="@+id/textView_datelabel"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/textView_company"
+            android:layout_toEndOf="@+id/textView_company"
+            android:layout_marginLeft="30dp"
+            android:textSize="@dimen/list_body"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opening Price"
+            android:id="@+id/textView_open"
+            android:layout_below="@+id/textView_datelabel"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/textView_last"
+            android:layout_toEndOf="@+id/textView_last"
+            android:layout_marginLeft="18dp"
+            android:textSize="@dimen/list_body"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diff."
+            android:id="@+id/textView_diff"
+            android:layout_below="@+id/textView_datelabel"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/textView_open"
+            android:layout_toEndOf="@+id/textView_open"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="25dp"
+            android:textSize="@dimen/list_body"
+            android:fontFamily="sans-serif-medium" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Updated:"
+            android:id="@+id/textView_datelabel"
+            android:gravity="center"
+            android:textSize="@dimen/list_body"
+            android:fontFamily="sans-serif"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textView_date"
+            android:layout_marginLeft="124dp"
+
+            />
+
+
+
+    </RelativeLayout>
+
+

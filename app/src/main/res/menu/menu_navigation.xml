@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/grp1"  android:checkableBehavior="single">
+        <item
+            android:id="@+id/navItem1"
+            android:title="Home"
+            android:icon="@drawable/ic_home_black_24dp"/>
+        <item
+            android:id="@+id/navItem2"
+            android:title="Live Stock"
+            android:icon="@drawable/ic_trending_up_black_24dp"/>
+        <item
+            android:id="@+id/navItem3"
+            android:title="Portfolio"
+            android:icon="@drawable/ic_folder_black_24dp"/>
+        <item
+            android:id="@+id/navItem4"
+            android:title="Calculator"
+            android:icon="@drawable/ic_calculator_black_24dp"/>
+        <item
+            android:id="@+id/navItem5"
+            android:title="Listed Companies"
+            android:icon="@drawable/ic_chart_bar_black_24dp" />
+
+    </group>
+
+</menu>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="128dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/colorPrimaryDark"
+    android:orientation="vertical"
+    android:padding="@dimen/md_keylines">
+    <TextView
+        android:id="@+id/field_username"
+        style="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="@color/white"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center"
+        android:text="Mero Share"
+        android:textSize="28sp" />
+</LinearLayout>
